@@ -18,6 +18,9 @@
 
 .image{
     border-radius: 99999rem;
+    width: 23vw;
+    height: 23vw;
+    cursor: pointer;
 }
 
 .cards{
@@ -106,6 +109,10 @@
     gap: 10%;
 }
 
+.network a{
+    transition: 0.4s;
+}
+
 .network img{
     background-color: white;
     border-radius: 99999rem;
@@ -128,4 +135,53 @@
     flex-direction: column;
     gap: 10vw;
     background-color: #1B1B1B;
+}
+
+.hiddenDiv{
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 99999rem;
+    width: 23vw;
+    height: 23vw;
+    transition: 5s;
+}
+
+.hiddenDiv h3{
+    opacity: 0;
+    transition: 0.4s;
+    transition-delay: 1s;
+    text-align: center;
+}
+
+.hiddenDiv p{
+    opacity: 0;
+    padding: 1vw;
+    transition: 0.4s;
+    transition-delay: 1s;
+    text-align: center;
+}
+
+.hiddenDiv:hover{
+    background-color: white;
+    border-bottom-left-radius: 5000rem;
+    border-bottom-right-radius: 5000rem;
+    border-top-left-radius: 99999rem;
+    border-top-right-radius: 99999rem;
+    width: 23vw;
+    height: 35vw;
+    transition: 4s;
+}
+
+.hiddenDiv:hover h3{
+    opacity: 1;
+    text-align: center;
+}
+
+.hiddenDiv:hover p{
+    opacity: 1;
+    padding: 1vw;
+    text-align: center;
+}
+
+.network a:hover{
+    transform: scale(1.2);
 }

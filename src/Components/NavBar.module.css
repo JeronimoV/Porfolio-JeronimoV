@@ -14,6 +14,11 @@
     width: 9vw;
     border: none;
     border-radius: 15px;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: #f95c01;
 }
 
 .link{
@@ -24,16 +29,21 @@
 
 .nav{
     display: flex;
-    gap: 10%;
     margin-left: auto;
-    margin-right: 7%;
+    margin-right: 15%;
 }
 
 .a{
     text-decoration: none;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .links{
     color: #FFFFFF;
+}
+
+.a:hover{
+    background-color: #1F1F1F;
 }
 

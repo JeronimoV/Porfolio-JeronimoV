@@ -8,6 +8,7 @@ const Home = () => {
     const [counter, setCounter] = useState([1, 2, 3])
     const [isClient, setIsClient] = useState(false)
     const [screenHeight, setScreenHeight] = useState("1000px")
+    const [seeInfo, setSeeInfo] = useState(false)
 
     useEffect(() => {
         setIsClient(true)
@@ -19,7 +20,7 @@ const Home = () => {
         }
     }, [isClient])
 
-    const handleArrow = () => {
+    const handleArrowRight = () => {
         const oldCount = [...counter]
         oldCount.shift()
         if(oldCount[1] === 7){
@@ -29,6 +30,26 @@ const Home = () => {
         }
         console.log(oldCount);
         setCounter(oldCount);
+    }
+
+    const handleArrowLeft = () => {
+        const oldCount = [...counter]
+        oldCount.pop()
+        if(oldCount[0] === 1){
+            oldCount.unshift(7)
+        }else{
+            oldCount.unshift(oldCount[0]-1)
+        }
+        console.log(oldCount);
+        setCounter(oldCount);
+    }
+
+    const showInfo = () => {
+        if(seeInfo){
+            setSeeInfo(false)
+        }else{
+            setSeeInfo(true)
+        }
     }
 
     return(
@@ -49,7 +70,12 @@ const Home = () => {
                         <h1>Jeronimo Vilar</h1>
                         <h3>FullStack Web Developer</h3>
                     </div>
-                    <img className={styles.image} src="/static/images/cara.png" width={361} height={361}></img>
+                    <div id="div" className={styles.hiddenDiv}>
+                        <img className={styles.image} onClick={showInfo} src="/static/images/cara.png"></img>
+                        <h3 className={seeInfo ? styles.hiddenH3 : styles.hidden}>About me</h3>
+                        <p className={seeInfo ? styles.hiddenP : styles.hidden}>Hi, iam Jeronimo Vilar, iam from Argentina, Buenos Aires, iam a FullStack Web Developer with 20 years old.
+I love programming, my dream is find a job to keep learning. My objective now is find a job to gain experience, i want to be a Senior developer one day!</p>
+                    </div>
                 </div>
                 <div id="technologies" className={styles.technologies}>
                     <h1>Technologies</h1>
@@ -63,11 +89,11 @@ const Home = () => {
                         }
                     `}</style>
                     <div className={styles.cards}>
-                        <img className={styles.arrow} src="https://www.svgrepo.com/show/513819/chevron-left.svg" onClick={handleArrow}/>
+                        <img className={styles.arrow} src="https://www.svgrepo.com/show/513819/chevron-left.svg" onClick={handleArrowLeft}/>
                         <img className={styles.technologiesCard}  src={`/static/images/${counter[0]}.PNG`}/>
                         <img className={styles.technologiesCard} src={`/static/images/${counter[1]}.PNG`}/>
                         <img className={styles.technologiesCard} src={`/static/images/${counter[2]}.PNG`}/>
-                        <img className={styles.arrow} src="https://www.svgrepo.com/show/513818/chevron-right.svg" onClick={handleArrow}/>
+                        <img className={styles.arrow} src="https://www.svgrepo.com/show/513818/chevron-right.svg" onClick={handleArrowRight}/>
                     </div>
                 </div>
                 <div id="projects" className={styles.projects}>
