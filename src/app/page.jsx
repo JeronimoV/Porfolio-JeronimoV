@@ -33,6 +33,7 @@ const Home = () => {
 
     return(
         <div>
+            {isClient ? 
             <div>
                 <div id="div1" className="container">
                     <style jsx>{`
@@ -103,7 +104,7 @@ const Home = () => {
                             <a href="https://wa.link/oy206p"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2044px-WhatsApp.svg.png"/></a>
                         </div>
                     </div>
-            </div>
+            </div>: <img src="https://media3.giphy.com/media/17mNCcKU1mJlrbXodo/giphy.gif?cid=ecf05e479s1pxlnh8dhwoh6cp295pz9crebgfr2jj37tko62&ep=v1_gifs_search&rid=giphy.gif&ct=g"/>}
         </div>
     )
 }
