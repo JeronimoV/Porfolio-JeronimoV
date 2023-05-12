@@ -1,10 +1,15 @@
 .container{
+    height: 100%;
+}
+
+.container2{
     display: flex;
     background-color: #1B1B1B;
     width: 100%;
-    height: auto;
     position: fixed;
     z-index: 10;
+    align-items: center;
+    justify-content: center;
 }
 
 .button{
@@ -15,6 +20,8 @@
     border: none;
     border-radius: 15px;
     cursor: pointer;
+    font-size: 0.8vw;
+    margin: 1vw;
 }
 
 .button:hover{
@@ -37,6 +44,7 @@
     text-decoration: none;
     padding-left: 10%;
     padding-right: 10%;
+    font-size: 0.8vw;
 }
 
 .links{
@@ -45,5 +53,70 @@
 
 .a:hover{
     background-color: #1F1F1F;
+}
+
+.menu{
+    height: 20vw;
+    position: absolute;
+    right: 5%;
+    top: 0px;
+}
+
+.nav2{
+    display: flex;
+    width: 100%;
+    margin: 0;
+}
+
+.hiddenMenu{
+    display: none;
+}
+
+.showedMenu{
+    display: block;
+    position: fixed;
+    height: max-content;
+    width: max-content;
+    padding: 2vw;
+    top: 18vw;
+    right: 0px;
+    background-color: #1B1B1B;
+}
+
+.showedMenu a{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1000px){
+    .button{
+        height: 7vw;
+        width: 15vw;
+        font-size: 2vw;
+        margin: 2vw;
+    }
+    .menu{
+        height: 11vw;
+    }
+    .showedMenu{
+        top: 8vw;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .container{
+        height: 10%;
+    }
+    .button{
+        height: 15vw;
+        width: 15vw;
+        font-size: 2vw;
+        margin: 2vw;
+    }
+    .menu{
+        height: 18vw;
+    }
+    .showedMenu{
+        top: 17vw;
+    }
 }
 

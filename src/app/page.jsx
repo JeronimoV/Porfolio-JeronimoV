@@ -56,13 +56,9 @@ const Home = () => {
         <div>
             {isClient ? 
             <div>
-                <div id="div1" className="container">
+                <div id="div1" className={styles.container}>
                     <style jsx>{`
-                        .container {
-                            display: flex;
-                            gap: 10%;
-                            align-items: center;
-                            justify-content: center;
+                        #div1 {
                             height: ${screenHeight};
                         }
                     `}</style>
@@ -90,9 +86,11 @@ I love programming, my dream is find a job to keep learning. My objective now is
                     `}</style>
                     <div className={styles.cards}>
                         <img className={styles.arrow} src="https://www.svgrepo.com/show/513819/chevron-left.svg" onClick={handleArrowLeft}/>
-                        <img className={styles.technologiesCard}  src={`/static/images/${counter[0]}.PNG`}/>
-                        <img className={styles.technologiesCard} src={`/static/images/${counter[1]}.PNG`}/>
-                        <img className={styles.technologiesCard} src={`/static/images/${counter[2]}.PNG`}/>
+                        <div className={styles.cardsOrder}>
+                            <img className={styles.technologiesCard}  src={`/static/images/${counter[0]}.PNG`}/>
+                            <img className={styles.technologiesCard} src={`/static/images/${counter[1]}.PNG`}/>
+                            <img className={styles.technologiesCard} src={`/static/images/${counter[2]}.PNG`}/>
+                        </div>
                         <img className={styles.arrow} src="https://www.svgrepo.com/show/513818/chevron-right.svg" onClick={handleArrowRight}/>
                     </div>
                 </div>
