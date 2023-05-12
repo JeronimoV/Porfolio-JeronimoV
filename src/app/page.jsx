@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import styles from "./page.module.css"
 
+
 const Home = () => {
 
     const [counter, setCounter] = useState([1, 2, 3])
@@ -48,7 +49,7 @@ const Home = () => {
                         <h1>Jeronimo Vilar</h1>
                         <h3>FullStack Web Developer</h3>
                     </div>
-                    <img className={styles.image} src="/static/images/cara.png" width={361} height={361}></img>
+                    <img className={styles.image} src="../../public/static/images/cara.png" width={361} height={361}></img>
                 </div>
                 <div id="technologies" className={styles.technologies}>
                     <h1>Technologies</h1>
@@ -63,9 +64,9 @@ const Home = () => {
                     `}</style>
                     <div className={styles.cards}>
                         <img className={styles.arrow} src="https://www.svgrepo.com/show/513819/chevron-left.svg" onClick={handleArrow}/>
-                        <img className={styles.technologiesCard}  src={`/static/images/${counter[0]}.png`}/>
-                        <img className={styles.technologiesCard} src={`/static/images/${counter[1]}.png`}/>
-                        <img className={styles.technologiesCard} src={`/static/images/${counter[2]}.png`}/>
+                        <img className={styles.technologiesCard}  src={`../../public/static/images/${counter[0]}.png`}/>
+                        <img className={styles.technologiesCard} src={`../../public/static/images/${counter[1]}.png`}/>
+                        <img className={styles.technologiesCard} src={`../../public/static/images/${counter[2]}.png`}/>
                         <img className={styles.arrow} src="https://www.svgrepo.com/show/513818/chevron-right.svg" onClick={handleArrow}/>
                     </div>
                 </div>
@@ -81,7 +82,7 @@ const Home = () => {
                         }
                     `}</style>
                     <div className={styles.allProjects}>
-                        <a href="https://viztastore.onrender.com"><img className={styles.projectsCards}  src="/static/images/vizta_page.png"/></a>
+                        <a href="https://viztastore.onrender.com"><img className={styles.projectsCards}  src="../../public/static/images/vizta_page.png"/></a>
                     </div>
                 </div>
                     <div id="contact" className={styles.contact}>
